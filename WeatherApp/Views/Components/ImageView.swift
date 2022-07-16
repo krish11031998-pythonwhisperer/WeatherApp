@@ -29,23 +29,26 @@ struct ImageView: View {
 	}
 	
 	var scale:ImageScale
+	var size:CGSize?
 	
 	@State var image:Image?
 	
-	init(name:String? = nil,scale:ImageScale = .fit) {
+	init(name:String? = nil,scale:ImageScale = .fit,size:CGSize? = nil) {
 		self.scale = scale
+		self.size = size
 		self.name = name
 		guard let name = name else { return }
 		self._image = .init(initialValue: .init(name))
 	}
 	
-	init(url:String? = nil,scale:ImageScale = .fit) {
+	init(url:String? = nil,scale:ImageScale = .fit,size:CGSize? = nil) {
 		self.url = url
 		self.scale = scale
+		self.size = size
 		loadImageFromURL()
 	}
 	
-	var body: some View {
+	@ViewBuilder var imageView:some View {
 		if let safeImage = image {
 			switch scale {
 			case .fit:
@@ -57,7 +60,14 @@ struct ImageView: View {
 					.resizable()
 					.scaledToFill()
 			}
+		}else {
+			Color.black
 		}
+	}
+	
+	var body: some View {
+		imageView
+			.frame(size: size)
 	}
 	
 	private func loadImageFromURL() {

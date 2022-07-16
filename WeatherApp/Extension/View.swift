@@ -16,5 +16,13 @@ extension View {
 	static func spacer(height:CGFloat) -> some View { Spacer().frame(height:height) }
 	
 	static func spacer(width:CGFloat) -> some View { Spacer().frame(width:width) }
+	
+	@ViewBuilder func frame(size:CGSize?) -> some View {
+		if let safeSize = size {
+			self.frame(width: safeSize.width, height: safeSize.height)
+		} else {
+			self
+		}
+	}
 }
 

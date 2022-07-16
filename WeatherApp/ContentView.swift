@@ -19,43 +19,19 @@ struct ContentView: View {
 	@Namespace var animation
 	
 	var headerView:some View {
-		VStack(alignment: .center, spacing: 2) {
-			"Montreal".headerText()
-			if !expanded {
-				"19°".heroText()
-					.minimumScaleFactor(0.1)
-					.matchedGeometryEffect(id: "temp", in: animation)
-					
-			}
-			VStack {
-				HStack(alignment: .center, spacing: 5) {
-					if expanded {
-						"19°".styled(fontSize: 20, weight: .bold, color: .gray)
-							.matchedGeometryEffect(id: "temp", in: animation)
-					}
-					 "\(expanded ? "|" : "") Mostly Clear".styled(fontSize: 20, weight: .bold, color: .gray)
-				}
-				if !expanded {
-					HStack(alignment: .center, spacing: 12) {
-						"H:24°".styled(fontSize: 20, weight: .regular, color: .white)
-						"L:18°".styled(fontSize: 20, weight: .regular, color: .white)
-					}
-				}
-				
-			}
-		}.frame(width: .totalWidth,alignment: .center)
+		FancyHeader(expanded: $expanded)
 		.safeAreaPadding(spacing: 98, edge: .top)
 	}
 	
 	var body: some View {
 		ZStack(alignment: .top) {
 			Color.appBG
-			ImageView(name: "Background",scale: .fill)
-				.offset(x: .zero, y: y_off)
-			ImageView(name: "House", scale: .fit)
-				.frame(width: .totalWidth, height: 390)
-				.safeAreaPadding(spacing: .totalHeight * 0.5 - 150, edge: .top)
-				.offset(x: .zero, y: y_off)
+			ZStack(alignment: .center) {
+				ImageView(name: "Background",scale: .fill)
+				ImageView(name: "House", scale: .fit,size:.init(width: .totalWidth, height: 390))
+					.position(x: .totalWidth * 0.5, y: .totalHeight * 0.36 + 195)
+			}.offset(x: .zero, y: y_off)
+			
 			headerView
 		}
 		.fullFrame()

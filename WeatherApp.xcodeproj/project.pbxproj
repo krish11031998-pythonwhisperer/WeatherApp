@@ -26,6 +26,7 @@
 		EFA1BFCE288216910081A30A /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1BFCD288216910081A30A /* ImageView.swift */; };
 		EFA1BFD0288218F10081A30A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1BFCF288218F10081A30A /* UIImage.swift */; };
 		EFA1BFD2288219F70081A30A /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1BFD1288219F70081A30A /* Error.swift */; };
+		EFA1BFD42882B2600081A30A /* FancyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1BFD32882B2600081A30A /* FancyHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		EFA1BFCD288216910081A30A /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		EFA1BFCF288218F10081A30A /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		EFA1BFD1288219F70081A30A /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		EFA1BFD32882B2600081A30A /* FancyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA1BFCD288216910081A30A /* ImageView.swift */,
+				EFA1BFD32882B2600081A30A /* FancyHeader.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				EFA1BFCA28820EA70081A30A /* Text.swift in Sources */,
 				EFA1BFD0288218F10081A30A /* UIImage.swift in Sources */,
 				EFA1BFD2288219F70081A30A /* Error.swift in Sources */,
+				EFA1BFD42882B2600081A30A /* FancyHeader.swift in Sources */,
 				EFA1BF8D2881D8D60081A30A /* WeatherAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
