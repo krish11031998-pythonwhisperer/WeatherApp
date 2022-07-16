@@ -27,6 +27,8 @@
 		EFA1BFD0288218F10081A30A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1BFCF288218F10081A30A /* UIImage.swift */; };
 		EFA1BFD2288219F70081A30A /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1BFD1288219F70081A30A /* Error.swift */; };
 		EFA1BFD42882B2600081A30A /* FancyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1BFD32882B2600081A30A /* FancyHeader.swift */; };
+		EFA1BFD62882B8620081A30A /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1BFD52882B8620081A30A /* SheetView.swift */; };
+		EFA1BFD82882D9190081A30A /* DaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1BFD72882D9190081A30A /* DaysView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		EFA1BFCF288218F10081A30A /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		EFA1BFD1288219F70081A30A /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		EFA1BFD32882B2600081A30A /* FancyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyHeader.swift; sourceTree = "<group>"; };
+		EFA1BFD52882B8620081A30A /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
+		EFA1BFD72882D9190081A30A /* DaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA1BFCC288216860081A30A /* Components */,
+				EFA1BFD72882D9190081A30A /* DaysView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 			children = (
 				EFA1BFCD288216910081A30A /* ImageView.swift */,
 				EFA1BFD32882B2600081A30A /* FancyHeader.swift */,
+				EFA1BFD52882B8620081A30A /* SheetView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -330,6 +336,7 @@
 			files = (
 				EFA1BFCE288216910081A30A /* ImageView.swift in Sources */,
 				EFA1BFBC2881E43A0081A30A /* CGFloat.swift in Sources */,
+				EFA1BFD82882D9190081A30A /* DaysView.swift in Sources */,
 				EFA1BFC62881EB160081A30A /* LinearGradient.swift in Sources */,
 				EFA1BFC22881E9AD0081A30A /* UIColor.swift in Sources */,
 				EFA1BFC828820C400081A30A /* MainView.swift in Sources */,
@@ -342,6 +349,7 @@
 				EFA1BFD0288218F10081A30A /* UIImage.swift in Sources */,
 				EFA1BFD2288219F70081A30A /* Error.swift in Sources */,
 				EFA1BFD42882B2600081A30A /* FancyHeader.swift in Sources */,
+				EFA1BFD62882B8620081A30A /* SheetView.swift in Sources */,
 				EFA1BF8D2881D8D60081A30A /* WeatherAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,4 +16,5 @@ extension CGSize {
 	
 	var half: CGSize { self * 0.5 }
 	
+	static func squared(_ dim:CGFloat) -> CGSize { .init(width: dim, height: dim) } 
 }

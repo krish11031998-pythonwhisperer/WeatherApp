@@ -15,6 +15,10 @@ extension CGFloat {
 	
 	static var totalHeight: CGFloat = UIScreen.main.bounds.height
 	
+	var half:CGFloat { self * 0.5 }
+	
 	func normalizeBetween(min:CGFloat,max:CGFloat) -> CGFloat { (self - min) / (max - min) }
+	
+	func maxClamp(_ value:CGFloat) -> CGFloat { self <= value ? self : value }
 	
 }
