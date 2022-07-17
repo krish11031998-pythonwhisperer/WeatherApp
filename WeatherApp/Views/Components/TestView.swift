@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct TestView: View {
+	
+	@ObservedObject var obj:DrawerState
+	
+	var body: some View{
+		"Hello".regularText()
+	}
+	
+}

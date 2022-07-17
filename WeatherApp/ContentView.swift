@@ -7,14 +7,17 @@
 
 import SwiftUI
 
+class DrawerState: ObservableObject {
+	@Published var y_off: CGFloat = .zero
+	@Published var expanded: Bool = false { didSet { y_off =  expanded ? -.totalHeight : .zero } }
+}
+
 struct ContentView: View {
 	
-	@State var y_off: CGFloat = .zero
-	@State var expanded: Bool = false {
-		didSet { y_off =  expanded ? -.totalHeight : .zero }
-	}
+	@StateObject var drawerState:DrawerState = .init()
+	var expanded: Bool { drawerState.expanded }
+	var y_off: CGFloat { drawerState.y_off }
 	
-	var y_off_target:CGFloat { !expanded ? .zero :  -.totalHeight }
 	
 	var headerHeight: CGFloat { !expanded ? 183 : 78 }
 	var headerViewPadding: CGFloat { expanded ? 48 : 98 }
@@ -24,7 +27,7 @@ struct ContentView: View {
 	
 	var headerView:some View {
 		VStack{
-			FancyHeader(expanded: $expanded)
+			FancyHeader(expanded: $drawerState.expanded)
 				.frame(width: .totalWidth, height:headerHeight)
 			Spacer()
 		}.safeAreaPadding(spacing: headerViewPadding, edge: .top)
@@ -43,40 +46,9 @@ struct ContentView: View {
 			Color.appBG
 			bgView
 			headerView
-			SheetView(expanded: $expanded, y_off: $y_off,maxHeight: sheetMaxHeight) { DayView() }
+			SheetView(drawerState: drawerState,maxHeight: sheetMaxHeight) { DayView() }
 		}
 		.fullFrame()
-		.gesture(DragGesture().onChanged(onChange(_:)).onEnded(onEnded(_:)))
-	}
-	
-	private func onChange(_ gesture:DragGesture.Value) {
-		withAnimation(.easeInOut) {
-			if y_off_target + gesture.translation.height <= 0 {
-				y_off = y_off_target + gesture.translation.height
-				if !expanded && .totalHeight + gesture.translation.height <= .totalHeight * 0.55 {
-					expanded.toggle()
-				}
-			}
-		}
-		
-	}
-	
-	private func onEnded( _ gesture:DragGesture.Value){
-		withAnimation(.easeInOut) {
-			if !expanded {
-				if .totalHeight + gesture.translation.height <= .totalHeight * 0.55 {
-					expanded.toggle()
-				} else {
-					y_off = y_off_target
-				}
-			} else {
-				if y_off + gesture.translation.height >= .totalHeight * -0.35 {
-					expanded.toggle()
-				} else {
-					y_off = y_off_target
-				}
-			}
-		}
 	}
 }
 

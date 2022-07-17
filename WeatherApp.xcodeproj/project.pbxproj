@@ -29,6 +29,8 @@
 		EFA1BFD42882B2600081A30A /* FancyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1BFD32882B2600081A30A /* FancyHeader.swift */; };
 		EFA1BFD62882B8620081A30A /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1BFD52882B8620081A30A /* SheetView.swift */; };
 		EFA1BFD82882D9190081A30A /* DaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1BFD72882D9190081A30A /* DaysView.swift */; };
+		EFA1BFDA2883DC1D0081A30A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1BFD92883DC1D0081A30A /* TestView.swift */; };
+		EFA1BFDC2883DE630081A30A /* EnumeratedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1BFDB2883DE630081A30A /* EnumeratedSequence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		EFA1BFD32882B2600081A30A /* FancyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyHeader.swift; sourceTree = "<group>"; };
 		EFA1BFD52882B8620081A30A /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		EFA1BFD72882D9190081A30A /* DaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysView.swift; sourceTree = "<group>"; };
+		EFA1BFD92883DC1D0081A30A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		EFA1BFDB2883DE630081A30A /* EnumeratedSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumeratedSequence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,7 @@
 				EFA1BFC928820EA70081A30A /* Text.swift */,
 				EFA1BFCF288218F10081A30A /* UIImage.swift */,
 				EFA1BFD1288219F70081A30A /* Error.swift */,
+				EFA1BFDB2883DE630081A30A /* EnumeratedSequence.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 				EFA1BFCD288216910081A30A /* ImageView.swift */,
 				EFA1BFD32882B2600081A30A /* FancyHeader.swift */,
 				EFA1BFD52882B8620081A30A /* SheetView.swift */,
+				EFA1BFD92883DC1D0081A30A /* TestView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -340,6 +346,7 @@
 				EFA1BFC62881EB160081A30A /* LinearGradient.swift in Sources */,
 				EFA1BFC22881E9AD0081A30A /* UIColor.swift in Sources */,
 				EFA1BFC828820C400081A30A /* MainView.swift in Sources */,
+				EFA1BFDA2883DC1D0081A30A /* TestView.swift in Sources */,
 				EFA1BF8F2881D8D60081A30A /* ContentView.swift in Sources */,
 				EFA1BFC02881E4ED0081A30A /* View.swift in Sources */,
 				EFA1BFBE2881E4810081A30A /* CGSize.swift in Sources */,
@@ -350,6 +357,7 @@
 				EFA1BFD2288219F70081A30A /* Error.swift in Sources */,
 				EFA1BFD42882B2600081A30A /* FancyHeader.swift in Sources */,
 				EFA1BFD62882B8620081A30A /* SheetView.swift in Sources */,
+				EFA1BFDC2883DE630081A30A /* EnumeratedSequence.swift in Sources */,
 				EFA1BF8D2881D8D60081A30A /* WeatherAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
