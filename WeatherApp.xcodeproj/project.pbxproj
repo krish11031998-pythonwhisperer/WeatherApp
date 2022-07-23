@@ -37,6 +37,7 @@
 		EFA1BFE42883FEA40081A30A /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1BFE32883FEA40081A30A /* Container.swift */; };
 		EFA1BFE6288417060081A30A /* WeatherDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1BFE5288417060081A30A /* WeatherDetailCard.swift */; };
 		EFA1BFE828849C7F0081A30A /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1BFE728849C7F0081A30A /* GridLayout.swift */; };
+		EFA1BFEA288BF8500081A30A /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1BFE9288BF8500081A30A /* ButtonModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		EFA1BFE32883FEA40081A30A /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		EFA1BFE5288417060081A30A /* WeatherDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailCard.swift; sourceTree = "<group>"; };
 		EFA1BFE728849C7F0081A30A /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		EFA1BFE9288BF8500081A30A /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 			children = (
 				EFA1BFB82881DC830081A30A /* ImageModifier.swift */,
 				EFA1BFC728820C400081A30A /* MainView.swift */,
+				EFA1BFE9288BF8500081A30A /* ButtonModifier.swift */,
 			);
 			path = ViewModifier;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				EFA1BFC02881E4ED0081A30A /* View.swift in Sources */,
 				EFA1BFBE2881E4810081A30A /* CGSize.swift in Sources */,
 				EFA1BFC42881E9CC0081A30A /* Color.swift in Sources */,
+				EFA1BFEA288BF8500081A30A /* ButtonModifier.swift in Sources */,
 				EFA1BFB92881DC830081A30A /* ImageModifier.swift in Sources */,
 				EFA1BFCA28820EA70081A30A /* Text.swift in Sources */,
 				EFA1BFD0288218F10081A30A /* UIImage.swift in Sources */,

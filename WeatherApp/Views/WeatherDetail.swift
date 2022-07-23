@@ -87,7 +87,7 @@ struct WeatherDetailView: View {
 					WeatherDetailCard(
 						systemName: "aqi.medium",
 						titleName: "Number \(val)",
-						size: .init(width: w * 0.5 - 5, height: 100),
+						size: .init(width: w * 0.5 - 5, height: 150),
 						padding: 10,
 						spacing: 10
 					) { size in
@@ -105,8 +105,9 @@ struct WeatherDetailView: View {
 struct WeatherDetailViewProvider:PreviewProvider {
 	
 	static var previews: some View{
-		WeatherDetailView()
-			.background(Color.black)
+		ScrollView(.vertical, showsIndicators: true) {
+			WeatherDetailView()
+		}.background(Color.white)
 	}
 }
 
