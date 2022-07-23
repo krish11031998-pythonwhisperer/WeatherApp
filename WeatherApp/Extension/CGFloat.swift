@@ -21,4 +21,5 @@ extension CGFloat {
 	
 	func maxClamp(_ value:CGFloat) -> CGFloat { self <= value ? self : value }
 	
+	var isZeroOrInfinite: Bool { self == .zero || self == .infinity }
 }

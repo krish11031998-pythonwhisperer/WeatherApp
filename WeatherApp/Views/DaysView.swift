@@ -55,9 +55,7 @@ struct DayView: View {
 	}
 	
 	var body: some View{
-		ScrollView(.vertical, showsIndicators: false) {
-			HScrollView(data: viewModel.hourlyForcast, spacing: 10, innerView: { weatherView($0 as! WeatherForcastData)})
-		}
+		HScrollView(data: viewModel.hourlyForcast, spacing: 10, innerView: { weatherView($0 as! WeatherForcastData)})
 	}
 	
 }

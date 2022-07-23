@@ -19,7 +19,15 @@ extension View {
 	
 	@ViewBuilder func frame(size:CGSize?) -> some View {
 		if let safeSize = size {
-			self.frame(width: safeSize.width, height: safeSize.height)
+			if !safeSize.width.isZeroOrInfinite && !safeSize.height.isZeroOrInfinite {
+				self.frame(width: safeSize.width, height: safeSize.height)
+			} else if !safeSize.width.isZeroOrInfinite {
+				self.frame(width: safeSize.width)
+			} else if !safeSize.height.isZeroOrInfinite {
+				self.frame(height: safeSize.height)
+			} else {
+				self
+			}
 		} else {
 			self
 		}
@@ -33,6 +41,29 @@ extension View {
 		} else {
 			self
 		}
+	}
+	
+	@ViewBuilder func insetVPadding(currIdx:Int,maxIdx:Int,_ val:CGFloat) -> some View {
+		if currIdx == .zero {
+			padding(.top,val)
+		} else if currIdx == maxIdx {
+			padding(.bottom,val)
+		} else {
+			self
+		}
+	}
+	
+	func roundedBorder(color:Color,lineWidth:CGFloat = 2, radius:CGFloat) -> some View {
+		overlay(
+			RoundedRectangle(cornerRadius: radius)
+				.stroke(color,lineWidth: lineWidth)
+		)
+	}
+	
+	func card() -> some View {
+		background(Color.componentBG)
+		.cornerRadius(12)
+		.roundedBorder(color: .white ,lineWidth: 0.6, radius: 12)
 	}
 
 }

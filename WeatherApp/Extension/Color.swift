@@ -29,4 +29,5 @@ extension Color {
 	
 	static var test: Self = .white
 	static var appBG: LinearGradient { .init(["5936B4","362A84"], startPoint: .topLeading, endPoint: .bottomTrailing) }
+	static var componentBG: LinearGradient { .init(["2E335A","1C1B33"], startPoint: .topLeading, endPoint: .bottomTrailing) }
 }

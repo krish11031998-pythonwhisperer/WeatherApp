@@ -18,7 +18,6 @@ struct ContentView: View {
 	var expanded: Bool { drawerState.expanded }
 	var y_off: CGFloat { drawerState.y_off }
 	
-	
 	var headerHeight: CGFloat { !expanded ? 183 : 78 }
 	var headerViewPadding: CGFloat { expanded ? 48 : 98 }
 	var sheetMaxHeight: CGFloat { .totalHeight - (headerHeight + headerViewPadding + 12) }
@@ -41,12 +40,19 @@ struct ContentView: View {
 		}.offset(x: .zero, y: y_off)
 	}
 	
+	@ViewBuilder func sheetInnerView() -> some View{
+		ScrollView(.vertical, showsIndicators: false) {
+			DayView()
+			WeatherDetailView()
+		}
+	}
+	
 	var body: some View {
 		ZStack(alignment: .bottom) {
 			Color.appBG
 			bgView
 			headerView
-			SheetView(drawerState: drawerState,maxHeight: sheetMaxHeight) { DayView() }
+			SheetView(drawerState: drawerState,maxHeight: sheetMaxHeight,innerView: sheetInnerView)
 		}
 		.fullFrame()
 	}

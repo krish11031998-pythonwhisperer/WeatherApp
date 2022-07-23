@@ -8,16 +8,18 @@
 import Foundation
 import SwiftUI
 
-//extension Text {
-//
-//	static func
-//
-//}
+extension Text {
+
+	func styled(fontSize:CGFloat,weight:Font.Weight,color:Color) -> Text {
+		self.font(.system(size: fontSize)).fontWeight(weight).foregroundColor(color)
+	}
+
+}
 
 extension String {
 	
 	func styled(fontSize:CGFloat,weight:Font.Weight,color:Color) -> Text {
-		.init(self).font(.system(size: fontSize)).fontWeight(weight).foregroundColor(color)
+		.init(self).styled(fontSize: fontSize, weight: weight, color: color)
 	}
 	
 	func regularText() -> Text {
